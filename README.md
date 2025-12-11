@@ -1,5 +1,3 @@
-chsh -s $(which zsh)
-
 ## 🚀 System Setup: Personalized Zsh Configuration
 
 This guide details the steps to set up a powerful and customized terminal environment using **Zsh**, **Oh My Zsh**, the **Spaceship** prompt, and essential plugins.
@@ -13,7 +11,12 @@ sudo apt update
 sudo apt install -y zsh curl autojump
 ```
 
-**Note**: To set Zsh as your default shell, run: chsh -s $(which zsh). You will need to log out and log back in for the change to take effect.
+**Note**: To set Zsh as your default shell run: 
+
+```bash
+chsh -s $(which zsh)
+```
+You will need to log out and log back in for the change to take effect.
 
 ### 2. Install Oh My Zsh
 
