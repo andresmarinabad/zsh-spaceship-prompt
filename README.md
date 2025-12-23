@@ -25,8 +25,10 @@ Oh My Zsh is a delightful, open-source framework for managing your Zsh configura
 sh -c "$(curl -fsSL [https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh](https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh))"
 ```
 
-### 3. Install the Spaceship Prompt
-#### 3.1. Install the Theme
+### 3. Install the Prompt
+
+#### 3.1 Spaceship
+##### 3.1.1 Install the Spaceship
 
 Clone the repository into your custom themes directory:
 
@@ -34,7 +36,7 @@ Clone the repository into your custom themes directory:
 git clone [https://github.com/spaceship-prompt/spaceship-prompt.git](https://github.com/spaceship-prompt/spaceship-prompt.git) "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
 ```
 
-#### 3.2. Create a Symlink
+##### 3.1.2 Create a Symlink
 
 Create a symbolic link to make the theme easily loadable by Oh My Zsh:
 
@@ -42,8 +44,7 @@ Create a symbolic link to make the theme easily loadable by Oh My Zsh:
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 ```
 
-#### 3.3. Update .zshrc
-
+##### 3.1.3 Update .zshrc
 Edit your ~/.zshrc file and set the theme:
 
 ```bash
@@ -51,9 +52,30 @@ Edit your ~/.zshrc file and set the theme:
 ZSH_THEME="spaceship"
 ```
 
-### 4. Install Nerd Fonts (Crucial for Spaceship)
+#### 3.2 Starship
 
-The Spaceship prompt uses special icons and symbols that require a Nerd Font to display correctly.
+##### 3.2.1 Install
+```
+curl -sS https://starship.rs/install.sh | sh
+```
+
+##### 3.2.2 Activate
+```
+echo 'eval "$(starship init zsh)"' >> ~/.zshrc
+exec zsh
+```
+
+##### 3.2.3 Update .zshrc
+Edit your ~/.zshrc file and set the theme:
+
+```bash
+# In ~/.zshrc, change the line to:
+ZSH_THEME=""
+```
+
+### 4. Install Nerd Fonts
+
+The prompt uses special icons and symbols that require a Nerd Font to display correctly.
 
 1. Visit [the Nerd Fonts website](https://www.nerdfonts.com/font-downloads).
 
